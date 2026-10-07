@@ -1,0 +1,9 @@
+# 运行与训练的最小依赖（CPU 即可，无需 GPU / PyTorch）
+
+numpy>=1.21          # 必需：模型前向/反向、GGUF 读写全部基于 numpy
+regex>=2022.0.0      # 必需：BPE 预切分用到 \p{L}（Python 内置 re 不支持）
+
+# 说明：
+# - 训练、导出、推理、对话全部在 CPU 上完成，不需要 torch / transformers
+# - 若 regex 缺失，tok_cn.py 会退化为内置的 re 近似正则，
+#   分词结果会与 llama.cpp 不一致，请务必安装

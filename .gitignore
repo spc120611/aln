@@ -1,0 +1,28 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# ---- 构建产物 / 模型权重（这些走 Release，不进 git）----
+*.gguf
+*.bin
+*.npz
+*.npy
+*.pth
+*.safetensors
+
+# ---- 训练生成的大文件（可由脚本重新生成）----
+corpus_arona.txt
+tokens_cn.npy
+opt_cn.npz
+ckpt_cn.npz
+stats.json
+
+# ---- 编辑器 / 系统 ----
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
